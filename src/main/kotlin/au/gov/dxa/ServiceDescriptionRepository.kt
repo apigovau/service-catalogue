@@ -49,7 +49,7 @@ class ServiceDescriptionRepository(mock:MutableList<String>? = null) {
         val url = baseRepoUri + endpoint + if (endpoint.last() == '/') endPointID else "/$endPointID"
         try {
             val con = URL(url).openConnection()
-            con.readTimeout = 1000
+            con.readTimeout = 5000
             returnString = con.inputStream.bufferedReader().readText()
         } catch (e:Exception) {
 
