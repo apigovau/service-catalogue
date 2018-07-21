@@ -38,8 +38,6 @@ class ServiceDescriptionRepository() {
         return index!!.content.map { it -> ServiceListVM(it.name, it.description, "Metadata", "Published", it.id) }
     }
 
-<<<<<<< HEAD
-=======
     private fun getRESTReturnString(endpoint : String = "index", endPointID:String = "") : String {
         var returnString: String = ""
         val baseRepoUri = System.getenv("BaseRepoURI")?: throw RuntimeException("No environment variable: BaseRepoURI")
@@ -55,5 +53,4 @@ class ServiceDescriptionRepository() {
         }
         return returnString
     }
->>>>>>> TestDiff
 }
